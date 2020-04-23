@@ -18,11 +18,13 @@
 
 buildscript {
     repositories {
-        google()
-        jcenter()
+//        google()
+//        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.6.3'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -31,8 +33,10 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
-        google()
+//        google()
+//        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven{ url 'https://maven.aliyun.com/repository/jcenter'}
     }
 }
 
@@ -43,7 +47,7 @@ task clean(type: Delete) {
 ext {
     buildToolsVersion = "28.0.3"
     supportLibVersion = "1.0.0"
-    daggerVersion = "2.15"
+    daggerVersion = "2.16"
     materialVersion="1.0.0"
     testVersion = "1.2.0"
     espressoVersion = "3.1.0"
